@@ -1,0 +1,24 @@
+{
+    "name": "Simple Wall Handler",
+    "description": "Opens a Simple Wall page with a given ticker.",
+    "version": "1.0",
+    "permissions": [
+        "tabs"
+    ],
+    "background": {
+        "scripts": [
+            "simple_wall.js"
+        ],
+        "persistent": false
+    },
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_title": "Simple Wall Handler"
+    },
+    "permissions": [
+        "clipboardRead",
+        "debugger",
+        "background"
+    ],
+    "manifest_version": 2
+}

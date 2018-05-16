@@ -1,0 +1,24 @@
+{
+    "name": "Barchart Handler",
+    "description": "Opens a barchart technical chart window for a given ticker.",
+    "version": "1.0",
+    "permissions": [
+        "tabs"
+    ],
+    "background": {
+        "scripts": [
+            "barchart.js"
+        ],
+        "persistent": false
+    },
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_title": "Barchart Handler"
+    },
+    "permissions": [
+        "clipboardRead",
+        "debugger",
+        "background"
+    ],
+    "manifest_version": 2
+}
