@@ -1,0 +1,1 @@
+javascript:(function(){$('.modal.current').remove();$('.sws-modal-container').remove();$('.jquery-modal.blocker').remove();$('#layout').css('filter', 'none');$.modal = null;})();
