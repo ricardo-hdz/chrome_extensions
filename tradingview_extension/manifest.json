@@ -1,0 +1,24 @@
+{
+    "name": "TradingView Handler",
+    "description": "Opens a TradingView technical chart window for a given ticker.",
+    "version": "1.0",
+    "permissions": [
+        "tabs"
+    ],
+    "background": {
+        "scripts": [
+            "tradingview.js"
+        ],
+        "persistent": false
+    },
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_title": "TradingView Handler"
+    },
+    "permissions": [
+        "clipboardRead",
+        "debugger",
+        "background"
+    ],
+    "manifest_version": 2
+}
