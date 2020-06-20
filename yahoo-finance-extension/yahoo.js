@@ -23,7 +23,11 @@ var Yahoo_Handler = {
             document.body.appendChild(document.createElement('textarea'));
         textarea.select();
         document.execCommand('paste');
-        return textarea.value;    
+        if (textarea.value.indexOf(',') !== -1) {
+            return textarea.value.replace(' ', '').split(',');
+        } else {
+            return textarea.value.split('\n');
+        }
     },
 
     /*
@@ -32,26 +36,17 @@ var Yahoo_Handler = {
     * @returns {string}
     * @private
     */
-    _getUrl : function (baseUrl) {
+   openUrls : function () {
         var url = '';
-        var ticker = this._pasteHack();
+        var tickers = this._pasteHack();
 
-        if (ticker) {
-            var url = baseUrl.replace(/{ticker}/g, ticker);
+        if (tickers) {
+            for (var i = 0, t; (t = tickers[i]); i++) {
+                url = this._URL.replace(/{ticker}/g, t);
+                chrome.tabs.create({url: url});
+            }
         }
-
-        return url;
-    },
-	
-	/**
-	* Creates a new chrome tab requesting the specified Jira ticket URL.
-	*
-	* @public
-	**/
-	openUrl: function() {
-        var url = this._getUrl(this._URL);
-        chrome.tabs.create({url: url});
-	}
+    }
 };
 
 /**
@@ -61,5 +56,5 @@ var Yahoo_Handler = {
 * @param {function}
 */
 chrome.browserAction.onClicked.addListener(function(tab) {
-    Yahoo_Handler.openUrl();
+    Yahoo_Handler.openUrls();
 });

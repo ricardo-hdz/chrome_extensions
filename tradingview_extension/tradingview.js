@@ -23,7 +23,11 @@ var Tradingview_Handler = {
             document.body.appendChild(document.createElement('textarea'));
         textarea.select();
         document.execCommand('paste');
-        return textarea.value.split('\n');
+        if (textarea.value.indexOf(',') !== -1) {
+            return textarea.value.replace(' ', '').split(',');
+        } else {
+            return textarea.value.split('\n');
+        }
     },
 
     /*

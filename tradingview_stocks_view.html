@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!-- TradingView Widget SINGLE STOCK BEGIN -->
+<div class="tradingview-widget-container">
+        <div id="tv-medium-widget"></div>
+        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/AAPL/" rel="noopener" target="_blank"><span class="blue-text">Apple</span></a>, <a href="https://www.tradingview.com/symbols/GOOGL/" rel="noopener" target="_blank"><span class="blue-text">Google</span></a> <span class="blue-text">and</span> <a href="https://www.tradingview.com/symbols/MSFT/" rel="noopener" target="_blank"><span class="blue-text">Microsoft Quotes</span></a> by TradingView</div>
+        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+        <script type="text/javascript">
+        new TradingView.MediumWidget(
+        {
+        "container_id": "tv-medium-widget",
+        "symbols": [
+          [
+            "Apple",
+            "AAPL "
+          ],
+          [
+            "Google",
+            "GOOGL"
+          ],
+          [
+            "Microsoft",
+            "MSFT"
+          ]
+        ],
+        "greyText": "Quotes by",
+        "gridLineColor": "#e9e9ea",
+        "fontColor": "#83888D",
+        "underLineColor": "#dbeffb",
+        "trendLineColor": "#4bafe9",
+        "width": "1000",
+        "height": "400",
+        "locale": "en"
+      }
+        );
+        </script>
+      </div>
+<!-- TradingView Widget END -->
+
+<!-- TradingView Widget Bsingle ticket view BEGIN -->
+<div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"><span class="blue-text">AAPL Quotes</span></a> by TradingView</div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+        {
+        "symbol": "NASDAQ:AAPL",
+        "width": "350",
+        "colorTheme": "light",
+        "isTransparent": false,
+        "locale": "en"
+      }
+        </script>
+      </div>
+      <!-- TradingView Widget END -->
+
+  <!-- TradingView Widget BEGIN BUY GAUGE-->
+<div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/technicals/" rel="noopener" target="_blank"><span class="blue-text">Technical Analysis for AAPL</span></a> by TradingView</div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
+    {
+    "showIntervalTabs": true,
+    "width": 425,
+    "colorTheme": "light",
+    "isTransparent": false,
+    "locale": "en",
+    "symbol": "NASDAQ:AAPL",
+    "interval": "1m",
+    "height": 450
+  }
+    </script>
+  </div>
+  <!-- TradingView Widget END -->
+</body>
+</html>
