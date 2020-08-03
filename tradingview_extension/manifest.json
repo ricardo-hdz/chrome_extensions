@@ -11,6 +11,7 @@
         ],
         "persistent": false
     },
+    "omnibox": { "keyword": "tv"},
     "browser_action": {
         "default_icon": "icon.png",
         "default_title": "TradingView Handler"

@@ -59,3 +59,12 @@ var Tradingview_Handler = {
 chrome.browserAction.onClicked.addListener(function(tab) {
     Tradingview_Handler.openUrls();
 });
+
+/** 
+ * Opens a new trading view window with given stock tick in omnibox
+ * @see https://developer.chrome.com/extensions/omnibox
+*/
+chrome.omnibox.onInputEntered.addListener(function(stock) {
+    var newURL = 'https://www.tradingview.com/symbols/' + encodeURIComponent(stock);
+    chrome.tabs.create({ url: newURL });
+});
