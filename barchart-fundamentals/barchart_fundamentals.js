@@ -7,7 +7,7 @@ var Barchart_Handler = {
 	* @type {string}
 	* @private
 	**/
-	_URL: 'https://www.barchart.com/stocks/quotes/{ticker}/options',
+	_URL: 'https://www.barchart.com/stocks/quotes/{ticker}/overview',
 
     
     /*

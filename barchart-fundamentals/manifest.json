@@ -1,19 +1,19 @@
 {
-    "name": "Barchart Options",
-    "description": "Opens a barchart options screener for a given ticker.",
+    "name": "Barchart Fundamentals",
+    "description": "Opens a barchart fundamentals page for a given ticker.",
     "version": "1.0",
     "permissions": [
         "tabs"
     ],
     "background": {
         "scripts": [
-            "barchart_options.js"
+            "barchart_fundamentals.js"
         ],
         "persistent": false
     },
     "browser_action": {
         "default_icon": "icon.png",
-        "default_title": "Barchart Options"
+        "default_title": "Barchart Fundamentals"
     },
     "permissions": [
         "clipboardRead",

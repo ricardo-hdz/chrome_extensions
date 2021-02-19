@@ -1,2 +1,2 @@
-# Barchart Options
-Opens a barchart options screener for a given ticker.
+# Barchart Fundamentals
+Opens a barchart fundamentals page for a given ticker.
