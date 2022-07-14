@@ -1,0 +1,25 @@
+{
+    "name": "Hiring Manager Interview - Topgrading",
+    "description": "Creates a new template for the HM topgrading interview",
+    "version": "1.0",
+    "permissions": [
+        "tabs"
+    ],
+    "background": {
+        "scripts": [
+            "template.js"
+        ],
+        "persistent": false
+    },
+    "omnibox": { "keyword": "hm"},
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_title": "HM Topgrading"
+    },
+    "permissions": [
+        "clipboardRead",
+        "debugger",
+        "background"
+    ],
+    "manifest_version": 2
+}
